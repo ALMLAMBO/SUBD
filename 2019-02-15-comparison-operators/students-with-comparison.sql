@@ -1,6 +1,8 @@
 use school;
 
-create table studentsV2 (
+set SQL_SAFE_UPDATES = 0;
+
+create table if not exists studentsV2 (
 	Id integer auto_increment primary key,
 	Name varchar(150) not null,
     Class char(3) not null,
@@ -29,4 +31,4 @@ update studentsV2
 
 select * from studentsV2;
 
-drop table studentsV2;
+/*drop table studentsV2;*/
